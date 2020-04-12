@@ -11,7 +11,6 @@ COPY test_main.py /
 COPY README.md /
 COPY .gitignore / 
 
-
 WORKDIR /
 
 RUN pip install --upgrade pip
