@@ -167,6 +167,7 @@ Resources:
 
   CustomResourceLambdaExecutionRole:
     Type: AWS::IAM::Role
+    DeletionPolicy: Retain
     Properties:
       ManagedPolicyArns:
         - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
@@ -193,6 +194,7 @@ Resources:
 
   KubectlAssumeRoleCustomResource:
     Type: Custom::CustomResource
+    DeletionPolicy: Retain
     Properties:
       ServiceToken: !GetAtt CustomResourceLambda.Arn
       KubectlRoleName: !Ref KubectlRoleName
@@ -203,6 +205,7 @@ Resources:
 
   CodePipelineServiceRole:
     Type: AWS::IAM::Role
+    DeletionPolicy: Retain
     Properties:
       Path: /
       AssumeRolePolicyDocument:
@@ -239,6 +242,7 @@ Resources:
 
   CodeBuildServiceRole:
     Type: AWS::IAM::Role
+    DeletionPolicy: Retain
     Properties:
       Path: /
       AssumeRolePolicyDocument:
@@ -305,6 +309,7 @@ Resources:
 
   CodeBuildProject:
     Type: AWS::CodeBuild::Project
+    DeletionPolicy: Retain
     Properties:
       Artifacts:
         Type: CODEPIPELINE
@@ -331,6 +336,7 @@ Resources:
 
   CodePipelineGitHub:
     Type: AWS::CodePipeline::Pipeline
+    DeletionPolicy: Retain
     Properties:
       RoleArn: !GetAtt CodePipelineServiceRole.Arn
       ArtifactStore:
