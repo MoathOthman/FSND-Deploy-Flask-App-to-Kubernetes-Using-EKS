@@ -114,6 +114,7 @@ Resources:
 
   CustomResourceLambda:
     Type: AWS::Lambda::Function
+    DeletionPolicy: Retain
     Properties:
       Code:
         ZipFile: |
