@@ -17,7 +17,7 @@ Parameters:
   GitSourceRepo:
     Type: String
     Description: https://github.com/MoathOthman/FSND-Deploy-Flask-App-to-Kubernetes-Using-EKS
-    Default: https://github.com/MoathOthman/FSND-Deploy-Flask-App-to-Kubernetes-Using-EKS
+    Default: FSND-Deploy-Flask-App-to-Kubernetes-Using-EKS
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: FSND-Deploy-Flask-App-to-Kubernetes-Using-EKS
