@@ -9,7 +9,7 @@ Parameters:
   EksClusterName:
     Type: String
     Description: lesson4-project
-    Default: sample-jwt-api
+    Default: simple-jwt-api
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: hproject name cluster name actually.
